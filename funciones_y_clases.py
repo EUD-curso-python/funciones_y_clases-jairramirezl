@@ -64,7 +64,7 @@ a=contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 print(a)
 
 
-def saltando_rocas():
+def saltando_rocas(rocas):
     '''Mínimo número de saltos en las rocas
 
     Esta función hace parte de un juego en el que el jugador debe cruzar un río
@@ -78,7 +78,22 @@ def saltando_rocas():
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
+rocas=[0,1,0,0,1,0,0]
+def saltando_rocas(rocas):
+    numsalto=0
+    j=0
+    for i in range(len(rocas)):
+      if j<=len(rocas) and j+2 <len(rocas) and rocas[j+2]==0:
+        j=j+2
+        numsalto+=1
+      elif j<=len(rocas) and j+1 <len(rocas) and rocas[j+1]==0:
+        j=j+1
+        numsalto+=1
+      else:
+        return numsalto
     pass
+
+print(saltando_rocas([0,1,0,0,1,0,0]))
 
 def pares_medias():
     '''Contar pares de medias
