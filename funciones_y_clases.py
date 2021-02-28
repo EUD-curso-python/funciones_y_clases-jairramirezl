@@ -65,6 +65,7 @@ print(a)
 
 
 def saltando_rocas(rocas):
+  
     '''Mínimo número de saltos en las rocas
 
     Esta función hace parte de un juego en el que el jugador debe cruzar un río
@@ -78,8 +79,6 @@ def saltando_rocas(rocas):
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
-rocas=[0,1,0,0,1,0,0]
-def saltando_rocas(rocas):
     numsalto=0
     j=0
     for i in range(len(rocas)):
@@ -95,7 +94,7 @@ def saltando_rocas(rocas):
 
 print(saltando_rocas([0,1,0,0,1,0,0]))
 
-def pares_medias():
+def pares_medias(lista):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -105,7 +104,16 @@ def pares_medias():
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
-    pass
+    #lista=[0,0,1,3,0,1,5,0,5,2,0,0,5]
+    a=set(lista)
+    listaunica=list(a)
+    dic={}
+    for i in listaunica:
+      b=lista.count(i)
+      if b//2==0:
+          dic[i]=b
+    return dic
+print(pares_medias([0,0,1,3,0,1,5,0,5,2,0,0,5]))
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
