@@ -32,7 +32,7 @@ def anio_bisiesto(x):
 #   pass
   return (x % 4==0) and (x %100 != 0) and (x%400==0)
 
-# anio_bisiesto(2020)
+anio_bisiesto(2020)
 
 
 def contar_valles(*args):
@@ -60,8 +60,8 @@ def contar_valles(*args):
       count+=1
   return count 
   #pass
-a=contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
-print(a)
+print(contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1]))
+#print(a)
 
 
 def saltando_rocas(rocas):
@@ -110,8 +110,8 @@ def pares_medias(lista):
     dic={}
     for i in listaunica:
       b=lista.count(i)
-      if b//2==0:
-          dic[i]=b
+      if b/2>=1:
+          dic[i]=b//2
     return dic
 print(pares_medias([0,0,1,3,0,1,5,0,5,2,0,0,5]))
 
@@ -121,6 +121,7 @@ print(pares_medias([0,0,1,3,0,1,5,0,5,2,0,0,5]))
 # los elementos del atributo `lista` unidos a través de comas. Ejemplo:
 # si `lista` es [1,2,3,4], __str__ debe devolver '1,2,3,4'
 
+#class ListaComa:
 
 
 
