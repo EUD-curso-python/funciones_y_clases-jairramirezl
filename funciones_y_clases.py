@@ -121,7 +121,25 @@ print(pares_medias([0,0,1,3,0,1,5,0,5,2,0,0,5]))
 # los elementos del atributo `lista` unidos a través de comas. Ejemplo:
 # si `lista` es [1,2,3,4], __str__ debe devolver '1,2,3,4'
 
-#class ListaComa:
+class ListaComa:
+    
+    #itemlist=[]
+    
+    def __init__(self, lista=[]):
+        self.lista=lista
+        
+    def __str__(self):
+        itemlist=""
+        
+        for i in self.lista:
+            itemlist+=str(i)+","
+            
+        itemlist= itemlist[:len(itemlist)-1]
+        return '{}'.format(itemlist)
+    
+
+objlistacoma = ListaComa([1,"b",2,"c"])
+print(objlistacoma)
 
 
 
