@@ -158,7 +158,38 @@ print(objlistacoma)
 # Ejemplo:
 # si `nombres` es ['Juan', 'David'] y `apellidos` es ['Torres', 'Salazar'],
 # el método `nombre completo` debe devolver  'Juan David Torres Salazar'
+class Persona:
+  def __init__(self,nombres=[],apellidos=[]):
+    self.nombres=nombres
+    self.apellidos=apellidos
+#    self.lapellidos=remnumtitle(self.apellidos)
+ 
+  def nombre_completo(self):
+    for i,j in enumerate(self.nombres):
+      if type(j)==str:
+        self.nombres[i]=self.nombres[i].title()
+      else:
+        del self.nombres[i]        
 
+    for i,j in enumerate(self.apellidos):
+      if type(j)==str:
+        self.apellidos[i]=self.apellidos[i].title()
+      else:
+        del self.apellidos[i]        
+
+    nombrecompleto=''        
+    
+    self.apellidos=list(reversed(self.apellidos))
+    for i in self.apellidos:
+      nombrecompleto=i+' '+nombrecompleto
+
+    self.nombres=list(reversed(self.nombres))
+    for i in self.nombres:
+      nombrecompleto=i+' '+nombrecompleto
+    return nombrecompleto
+       
+nombre=Persona(['jair','mateo','Angie','Anabella','hilba',222], ['lara','ramirez','Morelos','rammo','ruiz',332])
+print(nombre.nombre_completo())
 
 
 
